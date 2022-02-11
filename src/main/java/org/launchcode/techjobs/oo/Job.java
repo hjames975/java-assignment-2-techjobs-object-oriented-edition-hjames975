@@ -34,28 +34,29 @@ public class Job {
     @Override
     public String toString() {
         if(name == ""){
-            name = "Data not available";
+            return  "Data not available";
         }
         else if(employer.getValue() == ""){
-            System.out.println("Data not available");
+            return  "Data not available";
         }
         else if(location.getValue() == ""){
-            System.out.println("Data not available");
+            return  "Data not available";
         }
         else if(positionType.getValue() == ""){
-            System.out.println("Data not available");
+            return  "Data not available";
         }
         else if(coreCompetency.getValue() == ""){
-            System.out.println("Data not available");
+            return  "Data not available";
         }
-
-        return "\nID:" + id +
-                "\nName:" + name  +
-                "\nEmployer:" + employer +
-                "\nLocation:" + location +
-                "\nPositionType:" + positionType +
-                "\nCoreCompetency:" + coreCompetency +
-                "\n";
+        else {
+            return "\nID:" + id +
+                    "\nName:" + name +
+                    "\nEmployer:" + employer +
+                    "\nLocation:" + location +
+                    "\nPositionType:" + positionType +
+                    "\nCoreCompetency:" + coreCompetency +
+                    "\n";
+        }
     }
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields

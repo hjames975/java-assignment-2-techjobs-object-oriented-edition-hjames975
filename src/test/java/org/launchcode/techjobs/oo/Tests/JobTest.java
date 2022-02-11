@@ -53,7 +53,7 @@ public class JobTest {
         String labelAndData = new_id3.toString();
         assertEquals(labelAndData, "\nID:" + new_id3.getId() +
                 "\nName:" + new_id3.getName() +
-                "\nEmployer:" + new_id3.getEmployer() +
+                "\nEmployer:" + new Employer("") +
                 "\nLocation:" + new_id3.getLocation() +
                 "\nPositionType:" + new_id3.getPositionType() +
                 "\nCoreCompetency:" + new_id3.getCoreCompetency() +
