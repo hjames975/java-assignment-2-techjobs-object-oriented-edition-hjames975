@@ -20,10 +20,16 @@ public class Job {
     public Job() {
         id = nextId;
         nextId++;
+        //added
+//        this.name = "";
+//        this.employer = new Employer;
+//        this.location = new Location();
+//        this.positionType = new PositionType();
+//        this.coreCompetency = new CoreCompetency();
     }
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
-        new Job();
+        this();
         this.name = name;
         this.employer = employer;
         this.location = location;
@@ -33,22 +39,33 @@ public class Job {
 
     @Override
     public String toString() {
-        if(name == ""){
-            return  "Data not available";
+        String result = "\nID:" + id ;
+
+//        result += "\nName:" + name == "" ? name :  "Data not available";
+//        result += "\nEmployer:" + employer.getValue() == ""? name :  "Data not available";
+//        result += "\nLocation:" + location.getValue() == ""? location :  "Data not available";
+//        result += "\nLocation:" + positionType.getValue() == ""? positionType :  "Data not available";
+//        result += "\nCoreCompetency:"+ coreCompetency.getValue() == ""? coreCompetency :  "Data not available";
+//
+//        result += "\n";
+
+        //return result;
+        if(name.equals("")){
+            name =  "Data not available";
         }
-        else if(employer.getValue() == ""){
-            return  "Data not available";
+        if(employer.getValue().equals("")){
+            employer = new Employer("Data not available") ;
         }
-        else if(location.getValue() == ""){
-            return  "Data not available";
+        if(location.getValue().equals("")){
+            location = new Location("Data not available");
         }
-        else if(positionType.getValue() == ""){
-            return  "Data not available";
+        if(positionType.getValue().equals("")){
+            positionType =  new PositionType("Data not available");
         }
-        else if(coreCompetency.getValue() == ""){
-            return  "Data not available";
+        if(coreCompetency.getValue().equals("")){
+            coreCompetency =  new CoreCompetency("Data not available");
         }
-        else {
+
             return "\nID:" + id +
                     "\nName:" + name +
                     "\nEmployer:" + employer +
@@ -56,7 +73,7 @@ public class Job {
                     "\nPositionType:" + positionType +
                     "\nCoreCompetency:" + coreCompetency +
                     "\n";
-        }
+
     }
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields

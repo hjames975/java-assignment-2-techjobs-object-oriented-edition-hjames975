@@ -43,7 +43,7 @@ public class JobTest {
 
     @Test
     public void testJobsForBlankLineBeforeAndAfter(){
-        String jobString = new_id2.toString();
+        String jobString = new_id3.toString();
         assertEquals('\n', jobString.charAt(0));
         assertEquals('\n', jobString.charAt(jobString.length() - 1));
     }
@@ -53,7 +53,7 @@ public class JobTest {
         String labelAndData = new_id3.toString();
         assertEquals(labelAndData, "\nID:" + new_id3.getId() +
                 "\nName:" + new_id3.getName() +
-                "\nEmployer:" + new Employer("") +
+                "\nEmployer:" + new_id3.getEmployer() +
                 "\nLocation:" + new_id3.getLocation() +
                 "\nPositionType:" + new_id3.getPositionType() +
                 "\nCoreCompetency:" + new_id3.getCoreCompetency() +
